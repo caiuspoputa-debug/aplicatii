@@ -17,14 +17,14 @@
       "id": "frizerie",
       "name": "Agenda Frizerie",
       "android": {
-        "version": "5.0.7",
-        "versionCode": 13,
-        "bytes": 2358690,
-        "url": "https://github.com/caiuspoputa-debug/tool-upload-iphone/releases/download/v5.0.7/Agenda-Frizerie-5.0.7.apk",
-        "sha256": "fdf40d5b64e3f9e2e8f37e8f4c08f9782783143492517f87f92f79116c85db4a"
+        "version": "5.0.8",
+        "versionCode": 14,
+        "bytes": 2358814,
+        "url": "https://github.com/caiuspoputa-debug/tool-upload-iphone/releases/download/v5.0.8/Agenda-Frizerie-5.0.8.apk",
+        "sha256": "28225974aea852733f40eda4ad2ca14ab64b8ec9832cb568414879e66044e6ca"
       },
       "iphone": {
-        "version": "5.0.7",
+        "version": "5.0.8",
         "type": "pwa",
         "url": "https://caiuspoputa-debug.github.io/tool-upload-iphone/"
       }
