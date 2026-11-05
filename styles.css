@@ -1,0 +1,65 @@
+@charset "UTF-8";
+:root{color-scheme:light;--paper:#f5f5f1;--panel:#fff;--ink:#1d2b32;--muted:#5b6770;--line:#dce1df;--blue:#315e70;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-synthesis:none}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;background:var(--paper);color:var(--ink);font-size:16px;line-height:1.6;-webkit-text-size-adjust:100%}
+a{color:inherit;text-decoration:none}
+a:focus-visible{outline:3px solid #2176a0;outline-offset:5px}
+.wrap{width:min(1160px,calc(100% - 64px));margin-inline:auto}
+.skip-link{position:absolute;top:12px;left:12px;z-index:10;transform:translateY(-180%);padding:10px 16px;background:var(--ink);color:#fff;border-radius:8px}
+.skip-link:focus{transform:none}
+.header{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:96px;border-bottom:1px solid var(--line)}
+.brand{display:inline-flex;align-items:center;gap:11px;font-size:19px;font-weight:750;letter-spacing:-.5px}
+.header-note{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:600;color:var(--muted)}
+.status-dot{width:7px;height:7px;background:#3b7964;border-radius:50%}
+.intro{padding:64px 0 40px;max-width:740px}
+.eyebrow{margin:0 0 15px;color:var(--blue);font-size:10px;font-weight:750;letter-spacing:2px}
+h1{font-size:clamp(38px,5.5vw,62px);line-height:1.08;letter-spacing:-2.8px;margin:0 0 23px;font-weight:750}
+h1 span{color:#74818a}
+.lead{font-size:17px;line-height:1.7;margin:0 0 12px;max-width:610px;color:#44525b}
+.latest-note{font-size:12px;color:var(--muted);margin:0}
+.app-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:stretch}
+.app-card{padding:25px 22px 22px;border:1px solid #d8dedc;background:var(--panel);border-radius:21px;min-width:0;box-shadow:0 4px 15px #263c4305}
+.app-heading{display:flex;gap:13px;align-items:center;min-width:0}
+.app-icon{flex:0 0 46px;width:46px;height:46px;display:grid;place-items:center;border-radius:14px}
+.app-icon svg{width:29px;height:29px;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.salon-icon{color:#8a496b;background:#f4ebf1}
+.barber-icon{color:#315e70;background:#eaf0f3}
+.trust-icon{color:#91681e;background:#f8f0df}
+.app-category{font-size:8px;font-weight:750;letter-spacing:1.6px;color:var(--muted);margin:0 0 2px}
+.app-heading h2{font-size:21px;line-height:1.3;letter-spacing:-.65px;margin:0;overflow-wrap:anywhere}
+.app-description{font-size:13px;line-height:1.65;color:var(--muted);margin:19px 0 23px;min-height:44px}
+.platform{background:#f7f8f7;border:1px solid #e6eae8;border-radius:13px;padding:15px;margin-top:12px}
+.platform-heading{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.platform-name{font-size:14px;font-weight:700}
+.version{font-size:10px;line-height:1.5;background:#fff;border:1px solid #dbe1df;border-radius:5px;padding:2px 7px;color:#50606a;font-variant-numeric:tabular-nums}
+.platform-description{font-size:10px;line-height:1.6;margin:5px 0 14px;color:var(--muted)}
+.platform-description span{padding:0 3px}
+.button{display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;min-height:46px;border:1px solid var(--ink);border-radius:8px;padding:11px 13px;font-size:12px;font-weight:650;line-height:1.5;transition:background .15s,transform .15s}
+.button.primary{background:var(--ink);color:#fff}
+.button.primary:hover{background:#354b57}
+.button.secondary{background:#fff;color:var(--ink);border-color:#cad5d8}
+.button.secondary:hover{background:#edf3f5;border-color:#7a959f}
+.button:active{transform:translateY(1px)}
+.button span{font-size:17px;line-height:1}
+.android-only{padding:28px 5px 9px;color:var(--muted)}
+.small-label{font-size:9px;font-weight:750;letter-spacing:1.5px;color:#74818a}
+.android-only p{font-size:12px;max-width:200px;margin:6px 0 0}
+.access-note{display:flex;gap:6px;align-items:flex-start;font-size:10px;color:var(--muted);line-height:1.6;margin:15px 0 0}
+.access-note svg{flex:0 0 13px;width:13px;height:15px;stroke:currentColor;fill:none;stroke-width:1.4;margin-top:1px}
+.installation{display:grid;grid-template-columns:.8fr 1fr 1fr;gap:34px;align-items:start;margin:44px 0 0;padding:32px 0 36px;border-top:1px solid var(--line)}
+.installation-intro .eyebrow{font-size:8px;letter-spacing:1.7px;margin-bottom:9px}
+.installation h2{font-size:23px;letter-spacing:-.8px;line-height:1.3;margin:0}
+.install-method{display:flex;gap:13px}
+.step-number{font-size:10px;color:#627883;padding-top:4px;font-weight:700}
+.install-method h3{font-size:13px;margin:0 0 7px}
+.install-method p{font-size:11px;line-height:1.85;color:var(--muted);margin:0;max-width:315px}
+.install-method strong{font-weight:650;color:#3c4e57}
+.footer{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding:20px 0 30px;color:#66767f;font-size:10px;line-height:1.8}
+.footer>span:first-child{font-weight:650}
+.footer span span{color:#a4b0b4;padding:0 5px}
+@media(min-width:1400px){.intro{padding-top:74px}}
+@media(max-width:980px){.wrap{width:calc(100% - 40px)}.app-grid{gap:12px}.app-card{padding:20px 15px}.app-icon{flex-basis:38px;width:38px;height:38px;border-radius:11px}.app-icon svg{width:25px;height:25px}.app-heading{gap:9px}.app-heading h2{font-size:18px}.app-category{font-size:7px;letter-spacing:1px}.platform{padding:12px}.button{font-size:11px;padding:10px}.platform-description{font-size:9px}.installation{gap:22px}}
+@media(max-width:760px){.wrap{width:calc(100% - 36px)}.header{min-height:77px}.intro{padding:40px 0 30px}h1{letter-spacing:-1.8px}.lead{font-size:15px;max-width:510px}.app-grid{grid-template-columns:1fr;gap:18px}.app-card{padding:24px}.app-heading{gap:13px}.app-icon{flex-basis:46px;width:46px;height:46px;border-radius:14px}.app-icon svg{width:29px;height:29px}.app-heading h2{font-size:23px}.app-category{font-size:8px;letter-spacing:1.6px}.app-description{min-height:0;margin:17px 0 20px;font-size:14px}.platform{padding:16px}.platform-name{font-size:15px}.version{font-size:11px}.platform-description{font-size:11px}.button{font-size:14px;min-height:49px;padding:11px 14px}.access-note{font-size:11px}.android-only{padding-top:20px}.android-only p{max-width:none}.installation{grid-template-columns:1fr;gap:25px;margin-top:32px;padding:27px 0 30px}.installation h2{font-size:26px}.install-method p{font-size:12px;max-width:none}.install-method h3{font-size:15px}.footer{font-size:9px;flex-direction:column;gap:6px}}
+@media(max-width:360px){.wrap{width:calc(100% - 28px)}.header-note{font-size:10px}.brand{font-size:17px;gap:8px}.brand img{width:28px;height:28px}h1{font-size:37px}.app-card{padding:20px}.latest-note{font-size:11px}.eyebrow{font-size:9px}.app-heading h2{font-size:21px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}}

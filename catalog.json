@@ -1,0 +1,8 @@
+{
+  "updated": "2026-11-05",
+  "apps": [
+    {"id":"salon","name":"Agenda Salon","android":{"version":"1.0.18","versionCode":29,"bytes":120085,"url":"https://github.com/caiuspoputa-debug/agenda-salon/releases/download/v1.0.18/Agenda-Salon-1.0.18.apk","sha256":"f40e4ae37ad5582ae05cea10bac9e965dabf597f5268e2a83c52500ada94cd07"},"iphone":null},
+    {"id":"frizerie","name":"Agenda Frizerie","android":{"version":"1.1.4","versionCode":10,"bytes":2347251,"url":"https://github.com/caiuspoputa-debug/tool-upload-iphone/releases/download/v1.1.4/Agenda-Frizerie-1.1.4.apk","sha256":"ac8f9b272be85a2c9a6e848aab9cbcf4b575fdbe6e103643816885290ad7328a"},"iphone":{"version":"5.0.4","type":"pwa","url":"https://caiuspoputa-debug.github.io/tool-upload-iphone/"}},
+    {"id":"trust","name":"TRUST MC","android":{"version":"1.27","versionCode":32,"bytes":5342376,"url":"https://caiuspoputa-debug.github.io/trust-mc-apps/descarca/?platform=android","passwordProtected":true,"sha256":"8dac563cb36434c15749f0821bfb52cc1017a152304e539b9752e3e2b1f70361"},"iphone":{"version":"1.27.0","type":"pwa","url":"https://caiuspoputa-debug.github.io/trust-mc-apps/descarca/?platform=iphone","passwordProtected":true}}
+  ]
+}
