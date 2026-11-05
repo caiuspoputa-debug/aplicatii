@@ -5,11 +5,11 @@
       "id": "salon",
       "name": "Agenda Salon",
       "android": {
-        "version": "1.0.19",
-        "versionCode": 30,
-        "bytes": 124179,
-        "url": "https://github.com/caiuspoputa-debug/agenda-salon/releases/download/v1.0.19/Agenda-Salon-1.0.19.apk",
-        "sha256": "cbab39363d03c703cc41aad1a18e216ec1b9fcf34aaa806643531619702a06f6"
+        "version": "1.0.20",
+        "versionCode": 31,
+        "bytes": 128276,
+        "url": "https://github.com/caiuspoputa-debug/agenda-salon/releases/download/v1.0.20/Agenda-Salon-1.0.20.apk",
+        "sha256": "887781805c087c8ba670901b0afd1d2c418723a66be74ff7c0e3f3ff0713eabd"
       },
       "iphone": null
     },
