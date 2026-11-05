@@ -1,8 +1,51 @@
 {
   "updated": "2026-11-05",
   "apps": [
-    {"id":"salon","name":"Agenda Salon","android":{"version":"1.0.19","versionCode":30,"bytes":124179,"url":"https://github.com/caiuspoputa-debug/agenda-salon/releases/download/v1.0.19/Agenda-Salon-1.0.19.apk","sha256":"cbab39363d03c703cc41aad1a18e216ec1b9fcf34aaa806643531619702a06f6"},"iphone":null},
-    {"id":"frizerie","name":"Agenda Frizerie","android":{"version":"1.1.4","versionCode":10,"bytes":2347251,"url":"https://github.com/caiuspoputa-debug/tool-upload-iphone/releases/download/v1.1.4/Agenda-Frizerie-1.1.4.apk","sha256":"ac8f9b272be85a2c9a6e848aab9cbcf4b575fdbe6e103643816885290ad7328a"},"iphone":{"version":"5.0.4","type":"pwa","url":"https://caiuspoputa-debug.github.io/tool-upload-iphone/"}},
-    {"id":"trust","name":"TRUST MC","android":{"version":"1.27","versionCode":32,"bytes":5342376,"url":"https://caiuspoputa-debug.github.io/trust-mc-apps/descarca/?platform=android","passwordProtected":true,"sha256":"8dac563cb36434c15749f0821bfb52cc1017a152304e539b9752e3e2b1f70361"},"iphone":{"version":"1.27.0","type":"pwa","url":"https://caiuspoputa-debug.github.io/trust-mc-apps/descarca/?platform=iphone","passwordProtected":true}}
+    {
+      "id": "salon",
+      "name": "Agenda Salon",
+      "android": {
+        "version": "1.0.19",
+        "versionCode": 30,
+        "bytes": 124179,
+        "url": "https://github.com/caiuspoputa-debug/agenda-salon/releases/download/v1.0.19/Agenda-Salon-1.0.19.apk",
+        "sha256": "cbab39363d03c703cc41aad1a18e216ec1b9fcf34aaa806643531619702a06f6"
+      },
+      "iphone": null
+    },
+    {
+      "id": "frizerie",
+      "name": "Agenda Frizerie",
+      "android": {
+        "version": "5.0.5",
+        "versionCode": 11,
+        "bytes": 2358074,
+        "url": "https://github.com/caiuspoputa-debug/tool-upload-iphone/releases/download/v5.0.5/Agenda-Frizerie-5.0.5.apk",
+        "sha256": "a6b1aab06b1c621a92d4204befa14dbb0fcdb4e6a15935730f8cd32cf359f585"
+      },
+      "iphone": {
+        "version": "5.0.5",
+        "type": "pwa",
+        "url": "https://caiuspoputa-debug.github.io/tool-upload-iphone/"
+      }
+    },
+    {
+      "id": "trust",
+      "name": "TRUST MC",
+      "android": {
+        "version": "1.27",
+        "versionCode": 32,
+        "bytes": 5342376,
+        "url": "https://caiuspoputa-debug.github.io/trust-mc-apps/descarca/?platform=android",
+        "passwordProtected": true,
+        "sha256": "8dac563cb36434c15749f0821bfb52cc1017a152304e539b9752e3e2b1f70361"
+      },
+      "iphone": {
+        "version": "1.27.0",
+        "type": "pwa",
+        "url": "https://caiuspoputa-debug.github.io/trust-mc-apps/descarca/?platform=iphone",
+        "passwordProtected": true
+      }
+    }
   ]
 }
