@@ -8,8 +8,8 @@ const { chromium } = require('playwright');
 const root = path.resolve(__dirname, '..');
 const expected = {
   'salon-android': ["1.0.21", "https://github.com/caiuspoputa-debug/agenda-salon/releases/download/v1.0.21/Agenda-Salon-1.0.21.apk"],
-  'frizerie-android': ['5.0.13', 'https://github.com/caiuspoputa-debug/tool-upload-iphone/releases/download/v5.0.13/Agenda-Frizerie-5.0.13.apk'],
-  'frizerie-iphone': ['5.0.13', 'https://caiuspoputa-debug.github.io/tool-upload-iphone/'],
+  'frizerie-android': ['5.0.14', 'https://github.com/caiuspoputa-debug/tool-upload-iphone/releases/download/v5.0.14/Agenda-Frizerie-5.0.14.apk'],
+  'frizerie-iphone': ['5.0.14', 'https://caiuspoputa-debug.github.io/tool-upload-iphone/'],
   'trust-android': ['1.27', 'https://caiuspoputa-debug.github.io/trust-mc-apps/descarca/?platform=android'],
   'trust-iphone': ['1.27.0', 'https://caiuspoputa-debug.github.io/trust-mc-apps/descarca/?platform=iphone']
 };
