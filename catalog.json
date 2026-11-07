@@ -51,11 +51,11 @@
       "id": "geometrie-roti",
       "name": "Geometrie Roți",
       "android": {
-        "version": "0.3.0",
-        "versionCode": 4,
-        "bytes": 3395034,
-        "url": "https://github.com/caiuspoputa-debug/geometrie-roti/releases/download/v0.3.0/Geometrie-Roti-Test-0.3.0.apk",
-        "sha256": "f3d927e244e192c85f0ddcae0b2c4cbfa6a0c3ffd63a2d42bab17a29b65fb1a8",
+        "version": "0.3.1",
+        "versionCode": 5,
+        "bytes": 3357113,
+        "url": "https://github.com/caiuspoputa-debug/geometrie-roti/releases/download/v0.3.1/Geometrie-Roti-Test-0.3.1.apk",
+        "sha256": "c38da66ffd26dad8b777d368295637eb0be4b46708b80ad94f3a07f6b8f19403",
         "passwordProtected": true
       },
       "iphone": null

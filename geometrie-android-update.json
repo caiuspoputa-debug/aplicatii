@@ -1,9 +1,9 @@
 {
-  "versionName": "0.3.0",
-  "versionCode": 4,
+  "versionName": "0.3.1",
+  "versionCode": 5,
   "minSdk": 26,
-  "size": 3395034,
-  "sha256": "f3d927e244e192c85f0ddcae0b2c4cbfa6a0c3ffd63a2d42bab17a29b65fb1a8",
-  "apkUrl": "https://github.com/caiuspoputa-debug/geometrie-roti/releases/download/v0.3.0/Geometrie-Roti-Test-0.3.0.apk",
-  "notes": "Actualizator Android integrat, backup în Firebase propriu și sincronizare opțională."
+  "size": 3357113,
+  "sha256": "c38da66ffd26dad8b777d368295637eb0be4b46708b80ad94f3a07f6b8f19403",
+  "apkUrl": "https://github.com/caiuspoputa-debug/geometrie-roti/releases/download/v0.3.1/Geometrie-Roti-Test-0.3.1.apk",
+  "notes": "Logo Geometrie Roți alb-negru cu accent roșu în antet și Setări. Buton Favorite funcțional, cu alegerea directă a mărcilor bifate."
 }
