@@ -12,7 +12,7 @@ const expected = {
   'frizerie-iphone': ['5.0.14', 'https://caiuspoputa-debug.github.io/tool-upload-iphone/'],
   'trust-android': ['1.27', 'https://caiuspoputa-debug.github.io/trust-mc-apps/descarca/?platform=android'],
   'trust-iphone': ['1.27.0', 'https://caiuspoputa-debug.github.io/trust-mc-apps/descarca/?platform=iphone'],
-  'geometrie-roti-android': ['0.2.0', 'https://github.com/caiuspoputa-debug/geometrie-roti/releases/download/v0.2.0/Geometrie-Roti-Test-0.2.0.apk']
+  'geometrie-roti-android': ['0.3.0', 'https://github.com/caiuspoputa-debug/geometrie-roti/releases/download/v0.3.0/Geometrie-Roti-Test-0.3.0.apk']
 };
 const productFiles = ['index.html', 'styles.css', 'catalog.json', 'assets/mark.svg'].map(name => path.join(root, name));
 for (const name of ['sw.js', 'app.js', 'manifest.webmanifest', 'pwa-storage.js']) {
