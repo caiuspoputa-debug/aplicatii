@@ -1,9 +1,9 @@
 {
-  "versionName": "0.3.2",
-  "versionCode": 6,
+  "versionName": "0.3.3",
+  "versionCode": 7,
   "minSdk": 26,
-  "size": 3357793,
-  "sha256": "5ebd63fdf92a2a491ee471bf893a7484b616458384f4083bb07f3c3ab029d34e",
-  "apkUrl": "https://github.com/caiuspoputa-debug/geometrie-roti/releases/download/v0.3.2/Geometrie-Roti-Test-0.3.2.apk",
-  "notes": "Caută marcă urcă deasupra tastaturii. Lista de rezultate se adaptează spațiului vizibil și se poate derula."
+  "size": 3411046,
+  "sha256": "2998fe77fdecfe8c8cc2e5e32b88f0190537f0ea4d2865fdd9e046b646b74ef1",
+  "apkUrl": "https://github.com/caiuspoputa-debug/geometrie-roti/releases/download/v0.3.3/Geometrie-Roti-Test-0.3.3.apk",
+  "notes": "Ghiduri PDF accesibile din Setări prin linkuri GitHub. Caius Poputa — Dezvoltator independent, menționat în aplicație și în metadatele APK-ului."
 }
