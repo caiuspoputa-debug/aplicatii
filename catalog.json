@@ -56,7 +56,8 @@
         "bytes": 3357793,
         "url": "https://github.com/caiuspoputa-debug/geometrie-roti/releases/download/v0.3.2/Geometrie-Roti-Test-0.3.2.apk",
         "sha256": "5ebd63fdf92a2a491ee471bf893a7484b616458384f4083bb07f3c3ab029d34e",
-        "passwordProtected": true
+        "passwordProtected": true,
+        "installationGuideUrl": "https://github.com/caiuspoputa-debug/geometrie-roti/releases/download/v0.3.2/Geometrie-Roti-Instructiuni-Instalare.pdf"
       },
       "iphone": null
     }

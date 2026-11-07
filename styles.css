@@ -40,6 +40,7 @@ h1 span{color:#74818a}
 .button.primary:hover{background:#354b57}
 .button.secondary{background:#fff;color:var(--ink);border-color:#cad5d8}
 .button.secondary:hover{background:#edf3f5;border-color:#7a959f}
+.installation-guide{margin-top:10px}
 .button:active{transform:translateY(1px)}
 .button span{font-size:17px;line-height:1}
 .android-only{padding:28px 5px 9px;color:var(--muted)}
