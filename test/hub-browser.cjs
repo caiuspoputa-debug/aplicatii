@@ -8,8 +8,8 @@ const { chromium } = require('playwright');
 const root = path.resolve(__dirname, '..');
 const expected = {
   'salon-android': ["1.1.1", "https://github.com/caiuspoputa-debug/agenda-salon/releases/download/v1.1.1/Agenda-Salon-1.1.1.apk"],
-  'frizerie-android': ['5.0.14', 'https://github.com/caiuspoputa-debug/tool-upload-iphone/releases/download/v5.0.14/Agenda-Frizerie-5.0.14.apk'],
-  'frizerie-iphone': ['5.0.14', 'https://caiuspoputa-debug.github.io/tool-upload-iphone/'],
+  'frizerie-android': ['5.0.15', 'https://github.com/caiuspoputa-debug/tool-upload-iphone/releases/download/v5.0.15/Agenda-Frizerie-5.0.15.apk'],
+  'frizerie-iphone': ['5.0.15', 'https://caiuspoputa-debug.github.io/tool-upload-iphone/'],
   'trust-android': ['1.27', 'https://caiuspoputa-debug.github.io/trust-mc-apps/descarca/?platform=android'],
   'trust-iphone': ['1.27.0', 'https://caiuspoputa-debug.github.io/trust-mc-apps/descarca/?platform=iphone'],
   'geometrie-roti-android': ['0.4.0', 'https://github.com/caiuspoputa-debug/geometrie-roti/releases/download/v0.4.0/Geometrie-Roti-0.4.0.apk']
@@ -73,6 +73,10 @@ const fingerprints = productFiles.map(file => [file, hash(file)]);
       if (action.target === '_blank') assert.match(action.rel, /(?:^|\s)noopener(?:\s|$)/);
     }
     assert.equal(await page.locator('[data-app="salon"] .platform').count(), 1);
+    const frizerie = catalog.apps.find(app => app.id === 'frizerie');
+    const frizerieCard = page.locator('[data-app="frizerie"]');
+    assert.match(await frizerieCard.innerText(), /Caius Poputa/);
+    assert.deepEqual(await frizerieCard.locator('.installation-guide').evaluateAll(links => links.map(link => link.href)), [frizerie.installationGuideUrl, frizerie.userGuideUrl]);
     assert.equal(await page.locator('[data-app="salon"] .iphone,[data-download="salon-iphone"]').count(), 0);
     assert.equal(await page.locator('[data-app="trust"] a[href$=".apk"],[data-app="trust"] a[href*="releases/download"],[data-app="trust"] a[href*=".enc"]').count(), 0);
     console.log('PASS exactly five current-version actions, Salon Android only, exact Trust password-gate URLs and original Frizerie PWA origin');

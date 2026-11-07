@@ -18,15 +18,20 @@
     {
       "id": "frizerie",
       "name": "Agenda Frizerie",
+      "developer": "Caius Poputa",
+      "installationGuideUrl": "https://caiuspoputa-debug.github.io/tool-upload-iphone/ghid-instalare.pdf",
+      "userGuideUrl": "https://caiuspoputa-debug.github.io/tool-upload-iphone/ghid-utilizare.pdf",
       "android": {
-        "version": "5.0.14",
-        "versionCode": 20,
-        "bytes": 2617177,
-        "url": "https://github.com/caiuspoputa-debug/tool-upload-iphone/releases/download/v5.0.14/Agenda-Frizerie-5.0.14.apk",
-        "sha256": "c2450bb9f343c7483f795f9f993cefbfacd9a48fabca88f7e2fd1c06b2b9ca87"
+        "version": "5.0.15",
+        "versionCode": 21,
+        "bytes": 2635172,
+        "url": "https://github.com/caiuspoputa-debug/tool-upload-iphone/releases/download/v5.0.15/Agenda-Frizerie-5.0.15.apk",
+        "sha256": "9c042993b95d087d98ed2ff1cfa054e2463ded0b45616e97da0190f76e893571",
+        "applicationId": "ro.caiuspoputa.agendafrizerie",
+        "signingCertificateSha256": "95c79cbc9e68e31611c477f8cc27050a682b4ee616a5c25d6cbc40005f1d2bf6"
       },
       "iphone": {
-        "version": "5.0.14",
+        "version": "5.0.15",
         "type": "pwa",
         "url": "https://caiuspoputa-debug.github.io/tool-upload-iphone/"
       }
