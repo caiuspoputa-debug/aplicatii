@@ -7,11 +7,12 @@ const { createHash } = require('node:crypto');
 const { chromium } = require('playwright');
 const root = path.resolve(__dirname, '..');
 const expected = {
-  'salon-android': ["1.0.21", "https://github.com/caiuspoputa-debug/agenda-salon/releases/download/v1.0.21/Agenda-Salon-1.0.21.apk"],
+  'salon-android': ["1.0.22", "https://github.com/caiuspoputa-debug/agenda-salon/releases/download/v1.0.22/Agenda-Salon-1.0.22.apk"],
   'frizerie-android': ['5.0.14', 'https://github.com/caiuspoputa-debug/tool-upload-iphone/releases/download/v5.0.14/Agenda-Frizerie-5.0.14.apk'],
   'frizerie-iphone': ['5.0.14', 'https://caiuspoputa-debug.github.io/tool-upload-iphone/'],
   'trust-android': ['1.27', 'https://caiuspoputa-debug.github.io/trust-mc-apps/descarca/?platform=android'],
-  'trust-iphone': ['1.27.0', 'https://caiuspoputa-debug.github.io/trust-mc-apps/descarca/?platform=iphone']
+  'trust-iphone': ['1.27.0', 'https://caiuspoputa-debug.github.io/trust-mc-apps/descarca/?platform=iphone'],
+  'geometrie-roti-android': ['0.1.1', 'https://github.com/caiuspoputa-debug/geometrie-roti/releases/download/v0.1.1/Geometrie-Roti-Test-0.1.1.apk']
 };
 const productFiles = ['index.html', 'styles.css', 'catalog.json', 'assets/mark.svg'].map(name => path.join(root, name));
 for (const name of ['sw.js', 'app.js', 'manifest.webmanifest', 'pwa-storage.js']) {
@@ -26,12 +27,12 @@ const fingerprints = productFiles.map(file => [file, hash(file)]);
   const errors = [], external = [];
   try {
     const catalog = JSON.parse(fs.readFileSync(path.join(root, 'catalog.json'), 'utf8'));
-    assert.equal(catalog.apps.length, 3);
+    assert.equal(catalog.apps.length, 4);
     for (const app of catalog.apps) for (const platform of ['android', 'iphone']) {
-      if (app.id === 'salon' && platform === 'iphone') { assert.equal(app[platform], null); continue; }
+      if (['salon', 'geometrie-roti'].includes(app.id) && platform === 'iphone') { assert.equal(app[platform], null); continue; }
       const [version, url] = expected[app.id + '-' + platform];
       assert.equal(app[platform].version, version); assert.equal(app[platform].url, url);
-      if (app.id === 'trust') assert.equal(app[platform].passwordProtected, true);
+      if (['trust', 'geometrie-roti'].includes(app.id)) assert.equal(app[platform].passwordProtected, true);
     }
     server = http.createServer((request, response) => {
       const url = new URL(request.url, 'http://local');
@@ -63,7 +64,7 @@ const fingerprints = productFiles.map(file => [file, hash(file)]);
     });
     const before = await storage(); await page.goto(url);
     const actions = await page.locator('[data-download]').evaluateAll(nodes => nodes.map(node => ({ id: node.dataset.download, url: node.href, version: node.closest('.platform').querySelector('.version').textContent, platform: node.closest('.platform').querySelector('.platform-name').textContent, accessible: node.getAttribute('aria-label'), target: node.target, rel: node.rel, download: node.hasAttribute('download') })));
-    assert.equal(actions.length, 5); assert.deepEqual(actions.map(value => value.id), Object.keys(expected));
+    assert.equal(actions.length, 6); assert.deepEqual(actions.map(value => value.id), Object.keys(expected));
     for (const action of actions) {
       assert.equal(action.url, expected[action.id][1]); assert.equal(action.version, expected[action.id][0]);
       assert(action.accessible && action.accessible.includes(action.version));
