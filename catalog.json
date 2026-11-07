@@ -53,14 +53,17 @@
       "id": "geometrie-roti",
       "name": "Geometrie Roți",
       "android": {
-        "version": "0.3.3",
-        "versionCode": 7,
-        "bytes": 3411046,
-        "url": "https://github.com/caiuspoputa-debug/geometrie-roti/releases/download/v0.3.3/Geometrie-Roti-Test-0.3.3.apk",
-        "sha256": "2998fe77fdecfe8c8cc2e5e32b88f0190537f0ea4d2865fdd9e046b646b74ef1",
+        "version": "0.4.0",
+        "versionCode": 10,
+        "bytes": 2652160,
+        "url": "https://github.com/caiuspoputa-debug/geometrie-roti/releases/download/v0.4.0/Geometrie-Roti-0.4.0.apk",
+        "sha256": "fa141658a9ff7541d4a891f30c450a2348d0d8820fdba8884c7ea46e1c90c672",
         "passwordProtected": true,
-        "installationGuideUrl": "https://github.com/caiuspoputa-debug/geometrie-roti/releases/download/v0.3.3/Geometrie-Roti-Instructiuni-Instalare.pdf",
-        "userGuideUrl": "https://github.com/caiuspoputa-debug/geometrie-roti/releases/download/v0.3.3/Geometrie-Roti-Ghid-de-Utilizare.pdf"
+        "installationGuideUrl": "https://github.com/caiuspoputa-debug/geometrie-roti/releases/download/v0.4.0/Geometrie-Roti-Instructiuni-Instalare.pdf",
+        "userGuideUrl": "https://github.com/caiuspoputa-debug/geometrie-roti/releases/download/v0.4.0/Geometrie-Roti-Ghid-de-Utilizare.pdf",
+        "applicationId": "ro.caiuspoputa.geometrieroti",
+        "developer": "Caius Poputa",
+        "signingCertificateSha256": "95c79cbc9e68e31611c477f8cc27050a682b4ee616a5c25d6cbc40005f1d2bf6"
       },
       "iphone": null
     }

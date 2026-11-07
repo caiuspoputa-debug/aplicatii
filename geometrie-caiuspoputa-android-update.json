@@ -1,0 +1,10 @@
+{
+  "applicationId": "ro.caiuspoputa.geometrieroti",
+  "versionName": "0.4.0",
+  "versionCode": 10,
+  "minSdk": 26,
+  "size": 2652160,
+  "sha256": "fa141658a9ff7541d4a891f30c450a2348d0d8820fdba8884c7ea46e1c90c672",
+  "apkUrl": "https://github.com/caiuspoputa-debug/geometrie-roti/releases/download/v0.4.0/Geometrie-Roti-0.4.0.apk",
+  "notes": "Caius Poputa — Dezvoltator independent. Identificator Android propriu și certificat personal. Actualizările acestei aplicații folosesc același identificator și aceeași cheie."
+}
