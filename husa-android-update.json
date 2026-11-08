@@ -1,0 +1,11 @@
+{
+  "version": "1.1.2",
+  "versionCode": 4,
+  "applicationId": "com.example.husablocareecran",
+  "bytes": 8019597,
+  "sha256": "2146f09ff7b0a3af70f884194cb209f5af3720eba9d408e54d3fba47cc47875f",
+  "signingCertificateSha256": "95c79cbc9e68e31611c477f8cc27050a682b4ee616a5c25d6cbc40005f1d2bf6",
+  "minSdk": 26,
+  "url": "https://caiuspoputa-debug.github.io/aplicatii/downloads/husa/1.1.2/Husa-Blocare-Ecran-1.1.2.apk",
+  "releaseNotes": "Diagnostic cu copiere, distribuire, export .txt și selectarea textului. Meniu de actualizare și verificare automată zilnică în aplicație."
+}
