@@ -7,7 +7,7 @@ const { createHash } = require('node:crypto');
 const { chromium } = require('playwright');
 const root = path.resolve(__dirname, '..');
 const expected = {
-  'salon-android': ["1.1.3", "https://github.com/caiuspoputa-debug/agenda-salon/releases/download/v1.1.3/Agenda-Salon-1.1.3.apk"],
+  'salon-android': ["1.1.3", "https://caiuspoputa-debug.github.io/aplicatii/downloads/salon/1.1.3/Agenda-Salon-1.1.3.apk"],
   'husa-android': ["1.1.5", "https://caiuspoputa-debug.github.io/aplicatii/downloads/husa/1.1.5/Husa-Blocare-Ecran-1.1.5.apk"],
   'frizerie-android': ['5.0.15', 'https://github.com/caiuspoputa-debug/tool-upload-iphone/releases/download/v5.0.15/Agenda-Frizerie-5.0.15.apk'],
   'frizerie-iphone': ['5.0.15', 'https://caiuspoputa-debug.github.io/tool-upload-iphone/'],
