@@ -25,9 +25,9 @@
         "applicationId": "com.example.husablocareecran",
         "bytes": 8003101,
         "sha256": "e4dd087839056ee5d20b24cd3b6bcf785900acb9d441b9de82211a7b5a180d78",
-        "url": "https://github.com/caiuspoputa-debug/husa-blocare-ecran/releases/download/v1.1.1/Husa-Blocare-Ecran-1.1.1.apk",
-        "installationGuideUrl": "https://github.com/caiuspoputa-debug/husa-blocare-ecran/releases/download/v1.1.1/Husa-Instalare.pdf",
-        "userGuideUrl": "https://github.com/caiuspoputa-debug/husa-blocare-ecran/releases/download/v1.1.1/Husa-Configurare.pdf",
+        "url": "https://caiuspoputa-debug.github.io/aplicatii/downloads/husa/1.1.1/Husa-Blocare-Ecran-1.1.1.apk",
+        "installationGuideUrl": "https://caiuspoputa-debug.github.io/aplicatii/downloads/husa/1.1.1/Husa-Instalare.pdf",
+        "userGuideUrl": "https://caiuspoputa-debug.github.io/aplicatii/downloads/husa/1.1.1/Husa-Configurare.pdf",
         "signingCertificateSha256": "95c79cbc9e68e31611c477f8cc27050a682b4ee616a5c25d6cbc40005f1d2bf6",
         "rotationMinSdk": 33
       },

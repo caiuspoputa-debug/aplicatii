@@ -7,7 +7,7 @@ Adresa publicată: https://caiuspoputa-debug.github.io/aplicatii/
 ## Distribuție
 
 - Salon Android: ultima distribuție APK existentă din `agenda-salon`.
-- Husa Android: APK-ul semnat și ghidurile PDF de instalare și configurare din `husa-blocare-ecran`.
+- Husa Android: APK-ul semnat și cele două ghiduri PDF sunt servite direct din `downloads/husa/1.1.1/`, pentru a evita eroarea 504 de pe ruta GitHub Releases. Fișierele sunt identice cu distribuția `husa-blocare-ecran`, verificate prin SHA-256. La actualizare, publică fișierele versiunii noi aici și schimbă cele trei linkuri din pagină și catalog.
 - Frizerie Android: APK-ul semnat din distribuția `tool-upload-iphone`.
 - Frizerie iPhone: deschide PWA la adresa originală. Originea, manifestul, stocarea și service worker-ul aplicației rămân la locul lor.
 - Trust Android și iPhone: deschid instalatorul existent `trust-mc-apps/descarca/` cu platforma corespunzătoare. Parola și protecția descărcării sunt păstrate; acest depozit nu conține APK Trust necriptat sau parole.
