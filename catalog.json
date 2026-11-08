@@ -1,17 +1,17 @@
 {
-  "updated": "2026-11-07",
+  "updated": "2026-11-08",
   "apps": [
     {
       "id": "salon",
       "name": "Agenda Salon",
       "android": {
-        "version": "1.1.1",
-        "versionCode": 36,
-        "bytes": 1394132,
-        "url": "https://github.com/caiuspoputa-debug/agenda-salon/releases/download/v1.1.1/Agenda-Salon-1.1.1.apk",
-        "sha256": "82feae8f7bc9cbf4992b120e597eb411f30712ab8e29c0f6386aef39f050035c",
-        "installationGuideUrl": "https://github.com/caiuspoputa-debug/agenda-salon/releases/download/v1.1.1/Agenda-Salon-Instalare.pdf",
-        "userGuideUrl": "https://github.com/caiuspoputa-debug/agenda-salon/releases/download/v1.1.1/Agenda-Salon-Utilizare.pdf"
+        "version": "1.1.2",
+        "versionCode": 37,
+        "bytes": 3010403,
+        "url": "https://github.com/caiuspoputa-debug/agenda-salon/releases/download/v1.1.2/Agenda-Salon-1.1.2.apk",
+        "sha256": "0a1ddcbfc71bb9b44f271c4b0cf8292d4377272aa919a4b2cc08aae053b66a49",
+        "installationGuideUrl": "https://github.com/caiuspoputa-debug/agenda-salon/releases/download/v1.1.2/Agenda-Salon-Instalare.pdf",
+        "userGuideUrl": "https://github.com/caiuspoputa-debug/agenda-salon/releases/download/v1.1.2/Agenda-Salon-Utilizare.pdf"
       },
       "iphone": null
     },
