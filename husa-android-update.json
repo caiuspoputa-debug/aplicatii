@@ -1,11 +1,11 @@
 {
-  "version": "1.1.3",
-  "versionCode": 5,
+  "version": "1.1.4",
+  "versionCode": 6,
   "applicationId": "com.example.husablocareecran",
-  "bytes": 8019541,
-  "sha256": "943fc5e1d7c6bd7ee246cd67bd2f73b8007b91f1a286784ae6223c6fcaf16976",
+  "bytes": 8019597,
+  "sha256": "5dc64ba4911e8d9b4e6d611189a646091668b5e32ac1ccd46a782f616ec73b8e",
   "signingCertificateSha256": "95c79cbc9e68e31611c477f8cc27050a682b4ee616a5c25d6cbc40005f1d2bf6",
   "minSdk": 26,
-  "url": "https://caiuspoputa-debug.github.io/aplicatii/downloads/husa/1.1.3/Husa-Blocare-Ecran-1.1.3.apk",
-  "releaseNotes": "Instalatorul intern și permisiunea sa au fost eliminate. Verificarea zilnică și popupul rămân, iar descărcarea se deschide în browser. Exportul diagnosticului este păstrat."
+  "url": "https://caiuspoputa-debug.github.io/aplicatii/downloads/husa/1.1.4/Husa-Blocare-Ecran-1.1.4.apk",
+  "releaseNotes": "Metodă alternativă dacă deschiderea husei este detectată, dar ecranul rămâne stins. Diagnostic mai precis; anularea cererilor întârziate la închiderea husei. Senzorul și pragul sunt păstrate. Actualizarea directă din Husa este reintegrată: Descarcă actualizarea, apoi Instalează, cu confirmare Android. Testează cu Somn activ și exportă diagnosticul."
 }
