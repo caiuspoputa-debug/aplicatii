@@ -65,3 +65,12 @@ h1 span{color:#74818a}
 @media(max-width:360px){.wrap{width:calc(100% - 28px)}.header-note{font-size:10px}.brand{font-size:17px;gap:8px}.brand img{width:28px;height:28px}h1{font-size:37px}.app-card{padding:20px}.latest-note{font-size:11px}.eyebrow{font-size:9px}.app-heading h2{font-size:21px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}}
 .geometry-icon{color:#08747b;background:#e1f1f0}
+.sms-icon{color:#435e86;background:#eaf0f8}
+.guide{max-width:720px;padding-bottom:40px}
+.guide h1{font-size:clamp(34px,5vw,54px)}
+.guide .app-card{margin-bottom:18px}
+.guide h2{font-size:21px;line-height:1.35;margin:0 0 12px}
+.guide p,.guide li{color:var(--muted);font-size:14px}
+.guide ol{padding-left:24px;margin-bottom:18px}
+.guide li+li{margin-top:8px}
+.guide .button{max-width:260px}

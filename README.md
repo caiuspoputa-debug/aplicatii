@@ -1,6 +1,6 @@
 # Aplicații — descărcări comune
 
-Pagină statică GitHub Pages pentru **Agenda Salon**, **Husa blocare ecran**, **Agenda Frizerie**, **TRUST MC** și **Geometrie Roți**. Afișează numai edițiile curente, câte o opțiune per platformă disponibilă. Salon, Husa și Geometrie Roți au exclusiv APK Android.
+Pagină statică GitHub Pages pentru **Agenda Salon**, **Husa blocare ecran**, **Agenda Frizerie**, **TRUST MC**, **Geometrie Roți** și **SMS Forward**. Afișează numai edițiile curente, câte o opțiune per platformă disponibilă. Salon, Husa, Geometrie Roți și SMS Forward au exclusiv APK Android.
 
 Adresa publicată: https://caiuspoputa-debug.github.io/aplicatii/
 
@@ -11,6 +11,7 @@ Adresa publicată: https://caiuspoputa-debug.github.io/aplicatii/
 - Frizerie Android: APK-ul semnat din distribuția `tool-upload-iphone`.
 - Frizerie iPhone: deschide PWA la adresa originală. Originea, manifestul, stocarea și service worker-ul aplicației rămân la locul lor.
 - Trust Android și iPhone: deschid instalatorul existent `trust-mc-apps/descarca/` cu platforma corespunzătoare. Parola și protecția descărcării sunt păstrate; acest depozit nu conține APK Trust necriptat sau parole.
+- SMS Forward Android: APK-ul semnat este servit din `downloads/sms-forward/1.5/`. Instrucțiunile de instalare și activare se găsesc în `sms-forward-instalare.html`; PIN-ul se comunică separat.
 
 `catalog.json` documentează versiunile, dimensiunile și SHA-256 verificate. Pentru o ediție viitoare, actualizează intrarea existentă și etichetele/linkurile din `index.html`, în loc să adaugi în pagină ediții mai vechi. Verifică ediția reală a APK-ului și linkul public înainte de publicare. Păstrează versiunea web distinctă de versiunea Android.
 
@@ -33,3 +34,9 @@ Husa 1.1.3 verifică versiunea din același manifest și deschide descărcarea �
 Husa 1.1.4 adaugă aprindere alternativă și diagnostic pentru afișaj; efectul în Somn trebuie confirmat pe telefon. Detecția magnetică este păstrată, iar descărcarea verificată și instalatorul Android sunt reintegrate în aplicație.
 
 Husa 1.1.5 elimină instalatorul intern, permisiunea REQUEST_INSTALL_PACKAGES și FileProvider-ul de actualizare după reapariția avertizării pe 1.1.4. Verificarea zilnică și descărcarea prin browser sunt păstrate, iar aprinderea și detecția magnetică sunt neschimbate.
+
+## Actualizări SMS Forward
+
+`sms-forward-android-update.json` este citit de SMS Forward începând cu versiunea 1.5. Publică APK-ul semnat într-un director nou sub `downloads/sms-forward/` și actualizează simultan manifestul, catalogul, linkul din pagină și ghidul de instalare. Păstrează identificatorul `ro.local.smsprincipal` și certificatul aceleiași aplicații. Versiunile deja publicate rămân nemodificate.
+
+Manifestul conține versiunea, identificatorul aplicației, certificatul, dimensiunea, SHA-256 și URL-ul APK-ului. Câmpurile `versionName` și `version`, respectiv `apkUrl` și `url`, trebuie să aibă valori identice. Aplicația deschide descărcarea în browser; instalarea se confirmă în Android.

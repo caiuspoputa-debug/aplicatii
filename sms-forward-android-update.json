@@ -1,0 +1,13 @@
+{
+  "version": "1.5",
+  "versionName": "1.5",
+  "versionCode": 6,
+  "applicationId": "ro.local.smsprincipal",
+  "bytes": 119503,
+  "sha256": "9d221cd5a52210121c6a5d37c725e9d6cfd06f7629421e7c0b0c961855ad2319",
+  "signingCertificateSha256": "2a44ff2c6ce913c6a13431a417e0791c8d18321e0a19086a5d5f2dedeee51177",
+  "minSdk": 26,
+  "url": "https://caiuspoputa-debug.github.io/aplicatii/downloads/sms-forward/1.5/SMS-Automat-Principal-1.5.apk",
+  "apkUrl": "https://caiuspoputa-debug.github.io/aplicatii/downloads/sms-forward/1.5/SMS-Automat-Principal-1.5.apk",
+  "releaseNotes": "Activare locală prin PIN și verificare zilnică a actualizărilor, cu alertă când este disponibilă o versiune nouă. Descărcarea se deschide în browser, iar instalarea se confirmă în Android."
+}

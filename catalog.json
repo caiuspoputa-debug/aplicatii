@@ -89,6 +89,22 @@
         "signingCertificateSha256": "95c79cbc9e68e31611c477f8cc27050a682b4ee616a5c25d6cbc40005f1d2bf6"
       },
       "iphone": null
+    },
+    {
+      "id": "sms-forward",
+      "name": "SMS Forward",
+      "android": {
+        "version": "1.5",
+        "versionCode": 6,
+        "applicationId": "ro.local.smsprincipal",
+        "bytes": 119503,
+        "sha256": "9d221cd5a52210121c6a5d37c725e9d6cfd06f7629421e7c0b0c961855ad2319",
+        "signingCertificateSha256": "2a44ff2c6ce913c6a13431a417e0791c8d18321e0a19086a5d5f2dedeee51177",
+        "minSdk": 26,
+        "url": "https://caiuspoputa-debug.github.io/aplicatii/downloads/sms-forward/1.5/SMS-Automat-Principal-1.5.apk",
+        "installationGuideUrl": "https://caiuspoputa-debug.github.io/aplicatii/sms-forward-instalare.html"
+      },
+      "iphone": null
     }
   ]
 }

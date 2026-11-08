@@ -13,9 +13,10 @@ const expected = {
   'frizerie-iphone': ['5.0.15', 'https://caiuspoputa-debug.github.io/tool-upload-iphone/'],
   'trust-android': ['1.27', 'https://caiuspoputa-debug.github.io/trust-mc-apps/descarca/?platform=android'],
   'trust-iphone': ['1.27.0', 'https://caiuspoputa-debug.github.io/trust-mc-apps/descarca/?platform=iphone'],
-  'geometrie-roti-android': ['0.4.0', 'https://github.com/caiuspoputa-debug/geometrie-roti/releases/download/v0.4.0/Geometrie-Roti-0.4.0.apk']
+  'geometrie-roti-android': ['0.4.0', 'https://github.com/caiuspoputa-debug/geometrie-roti/releases/download/v0.4.0/Geometrie-Roti-0.4.0.apk'],
+  'sms-forward-android': ['1.5', 'https://caiuspoputa-debug.github.io/aplicatii/downloads/sms-forward/1.5/SMS-Automat-Principal-1.5.apk']
 };
-const productFiles = ['index.html', 'styles.css', 'catalog.json', 'assets/mark.svg'].map(name => path.join(root, name));
+const productFiles = ['index.html', 'styles.css', 'catalog.json', 'assets/mark.svg', 'sms-forward-instalare.html', 'sms-forward-android-update.json'].map(name => path.join(root, name));
 for (const name of ['sw.js', 'app.js', 'manifest.webmanifest', 'pwa-storage.js']) {
   const file = path.resolve(root, '../tool-upload-iphone/docs', name);
   if (fs.existsSync(file)) productFiles.push(file);
@@ -28,13 +29,28 @@ const fingerprints = productFiles.map(file => [file, hash(file)]);
   const errors = [], external = [];
   try {
     const catalog = JSON.parse(fs.readFileSync(path.join(root, 'catalog.json'), 'utf8'));
-    assert.equal(catalog.apps.length, 5);
+    assert.equal(catalog.apps.length, 6);
     for (const app of catalog.apps) for (const platform of ['android', 'iphone']) {
-      if (['salon', 'husa', 'geometrie-roti'].includes(app.id) && platform === 'iphone') { assert.equal(app[platform], null); continue; }
+      if (['salon', 'husa', 'geometrie-roti', 'sms-forward'].includes(app.id) && platform === 'iphone') { assert.equal(app[platform], null); continue; }
       const [version, url] = expected[app.id + '-' + platform];
       assert.equal(app[platform].version, version); assert.equal(app[platform].url, url);
       if (['trust', 'geometrie-roti'].includes(app.id)) assert.equal(app[platform].passwordProtected, true);
     }
+    const sms = catalog.apps.find(app => app.id === 'sms-forward').android;
+    const smsFeed = JSON.parse(fs.readFileSync(path.join(root, 'sms-forward-android-update.json'), 'utf8'));
+    const smsApk = path.join(root, 'downloads', 'sms-forward', '1.5', 'SMS-Automat-Principal-1.5.apk');
+    assert.equal(smsFeed.versionName, smsFeed.version);
+    assert.equal(smsFeed.apkUrl, smsFeed.url);
+    assert.equal(smsFeed.applicationId, 'ro.local.smsprincipal');
+    assert.equal(smsFeed.versionCode, 6);
+    assert.equal(smsFeed.minSdk, 26);
+    for (const field of ['version', 'versionCode', 'applicationId', 'bytes', 'sha256', 'signingCertificateSha256', 'url', 'minSdk']) assert.equal(smsFeed[field], sms[field], field);
+    assert.match(smsFeed.signingCertificateSha256, /^[0-9a-f]{64}$/);
+    assert.equal(smsFeed.bytes, fs.statSync(smsApk).size);
+    assert.equal(smsFeed.sha256, hash(smsApk));
+    assert.match(smsFeed.releaseNotes, /PIN.*actualiz/i);
+    assert.equal(fs.readFileSync(smsApk + '.sha256', 'utf8').trim(), smsFeed.sha256 + '  ' + path.basename(smsApk));
+    console.log('PASS SMS Forward feed aliases, APK metadata and byte-for-byte SHA-256 match');
     server = http.createServer((request, response) => {
       const url = new URL(request.url, 'http://local');
       if (url.pathname === '/fixture-empty') { response.writeHead(200, { 'Content-Type': 'text/html' }); response.end('<!doctype html><title>Isolated storage fixture</title>'); return; }
@@ -65,12 +81,13 @@ const fingerprints = productFiles.map(file => [file, hash(file)]);
     });
     const before = await storage(); await page.goto(url);
     const actions = await page.locator('[data-download]').evaluateAll(nodes => nodes.map(node => ({ id: node.dataset.download, url: node.href, version: node.closest('.platform').querySelector('.version').textContent, platform: node.closest('.platform').querySelector('.platform-name').textContent, accessible: node.getAttribute('aria-label'), target: node.target, rel: node.rel, download: node.hasAttribute('download') })));
-    assert.equal(actions.length, 7); assert.deepEqual(actions.map(value => value.id), Object.keys(expected));
+    assert.equal(actions.length, Object.keys(expected).length); assert.deepEqual(actions.map(value => value.id), Object.keys(expected));
     for (const action of actions) {
       assert.equal(action.url, expected[action.id][1]); assert.equal(action.version, expected[action.id][0]);
       assert(action.accessible && action.accessible.includes(action.version));
       assert.equal(action.platform, action.id.endsWith('iphone') ? 'iPhone' : 'Android');
       if (action.id.endsWith('iphone') || action.id.startsWith('trust-')) assert.equal(action.download, false);
+      if (['salon-android', 'husa-android', 'sms-forward-android'].includes(action.id)) assert.equal(action.download, true);
       if (action.target === '_blank') assert.match(action.rel, /(?:^|\s)noopener(?:\s|$)/);
     }
     assert.equal(await page.locator('[data-app="salon"] .platform').count(), 1);
@@ -82,7 +99,17 @@ const fingerprints = productFiles.map(file => [file, hash(file)]);
     assert.deepEqual(await frizerieCard.locator('.installation-guide').evaluateAll(links => links.map(link => link.href)), [frizerie.installationGuideUrl, frizerie.userGuideUrl]);
     assert.equal(await page.locator('[data-app="salon"] .iphone,[data-download="salon-iphone"]').count(), 0);
     assert.equal(await page.locator('[data-app="trust"] a[href$=".apk"],[data-app="trust"] a[href*="releases/download"],[data-app="trust"] a[href*=".enc"]').count(), 0);
-    console.log('PASS exactly seven current-version actions, Salon Android only, exact Trust password-gate URLs and original Frizerie PWA origin');
+    const smsCard = page.locator('[data-app="sms-forward"]');
+    assert.equal(await smsCard.locator('.platform').count(), 1);
+    assert.match(await smsCard.innerText(), /proprietarul telefonului/i);
+    await smsCard.getByRole('link', { name: /instrucțiunile de instalare/i }).click();
+    assert.equal(new URL(page.url()).pathname, '/aplicatii/sms-forward-instalare.html');
+    assert.equal(await page.locator('h1').innerText(), 'SMS Forward 1.5');
+    assert.match(await page.locator('main').innerText(), /PIN-ul primit separat/);
+    assert.match(await page.locator('main').innerText(), /aplicație SMS implicită/);
+    assert.equal(await page.locator('a[download]').getAttribute('href'), smsFeed.url);
+    await page.goto(url);
+    console.log('PASS six app cards, exact Android/iPhone actions, SMS guide and original Trust/Frizerie URLs');
 
     const pageContract = await page.evaluate(() => ({ scripts: document.scripts.length, frames: document.querySelectorAll('iframe,object,embed').length, forms: document.forms.length, csp: document.querySelector('meta[http-equiv="Content-Security-Policy"]')?.content, resources: [...document.querySelectorAll('[src],link[href]')].map(node => node.src || node.href) }));
     assert.equal(pageContract.scripts, 0); assert.equal(pageContract.frames, 0); assert.equal(pageContract.forms, 0);
