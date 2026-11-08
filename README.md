@@ -7,7 +7,7 @@ Adresa publicată: https://caiuspoputa-debug.github.io/aplicatii/
 ## Distribuție
 
 - Salon Android: ultima distribuție APK existentă din `agenda-salon`.
-- Husa Android: APK-ul semnat și cele două ghiduri PDF sunt servite direct din `downloads/husa/1.1.2/`, pentru a evita eroarea 504 de pe ruta GitHub Releases. Fișierele sunt identice cu distribuția `husa-blocare-ecran`, verificate prin SHA-256. La actualizare, publică fișierele versiunii noi aici și schimbă cele trei linkuri din pagină și catalog.
+- Husa Android: APK-ul semnat și cele două ghiduri PDF sunt servite direct din `downloads/husa/1.1.3/`, pentru a evita eroarea 504 de pe ruta GitHub Releases. Fișierele sunt identice cu distribuția `husa-blocare-ecran`, verificate prin SHA-256. La actualizare, publică fișierele versiunii noi aici și schimbă cele trei linkuri din pagină și catalog.
 - Frizerie Android: APK-ul semnat din distribuția `tool-upload-iphone`.
 - Frizerie iPhone: deschide PWA la adresa originală. Originea, manifestul, stocarea și service worker-ul aplicației rămân la locul lor.
 - Trust Android și iPhone: deschid instalatorul existent `trust-mc-apps/descarca/` cu platforma corespunzătoare. Parola și protecția descărcării sunt păstrate; acest depozit nu conține APK Trust necriptat sau parole.
@@ -27,3 +27,5 @@ Publică întâi APK-ul și documentele în release-ul GitHub, verifică descăr
 ## Actualizări Husa
 
 `husa-android-update.json` este citit de Husa începând cu 1.1.2. Publică APK-ul și cele două PDF-uri în directorul versiunii și actualizează simultan manifestul, catalogul și linkurile din pagină. Manifestul conține versiunea, identificatorul, certificatul, dimensiunea, SHA-256 și adresa directă Pages. Nu înlocui fișierul unei versiuni deja publicate.
+
+Husa 1.1.3 verifică versiunea din același manifest și deschide descărcarea în browser. Instalatorul intern și REQUEST_INSTALL_PACKAGES au fost eliminate.
