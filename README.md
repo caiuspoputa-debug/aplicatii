@@ -7,7 +7,7 @@ Adresa publicată: https://caiuspoputa-debug.github.io/aplicatii/
 ## Distribuție
 
 - Salon Android: ultima distribuție APK existentă din `agenda-salon`.
-- Husa Android: APK-ul semnat și cele două ghiduri PDF sunt servite direct din `downloads/husa/1.1.4/`, pentru a evita eroarea 504 de pe ruta GitHub Releases. Fișierele sunt identice cu distribuția `husa-blocare-ecran`, verificate prin SHA-256. La actualizare, publică fișierele versiunii noi aici și schimbă cele trei linkuri din pagină și catalog.
+- Husa Android: APK-ul semnat și cele două ghiduri PDF sunt servite direct din `downloads/husa/1.1.5/`, pentru a evita eroarea 504 de pe ruta GitHub Releases. Fișierele sunt identice cu distribuția `husa-blocare-ecran`, verificate prin SHA-256. La actualizare, publică fișierele versiunii noi aici și schimbă cele trei linkuri din pagină și catalog.
 - Frizerie Android: APK-ul semnat din distribuția `tool-upload-iphone`.
 - Frizerie iPhone: deschide PWA la adresa originală. Originea, manifestul, stocarea și service worker-ul aplicației rămân la locul lor.
 - Trust Android și iPhone: deschid instalatorul existent `trust-mc-apps/descarca/` cu platforma corespunzătoare. Parola și protecția descărcării sunt păstrate; acest depozit nu conține APK Trust necriptat sau parole.
@@ -31,3 +31,5 @@ Publică întâi APK-ul și documentele în release-ul GitHub, verifică descăr
 Husa 1.1.3 verifică versiunea din același manifest și deschide descărcarea în browser. Instalatorul intern și REQUEST_INSTALL_PACKAGES au fost eliminate.
 
 Husa 1.1.4 adaugă aprindere alternativă și diagnostic pentru afișaj; efectul în Somn trebuie confirmat pe telefon. Detecția magnetică este păstrată, iar descărcarea verificată și instalatorul Android sunt reintegrate în aplicație.
+
+Husa 1.1.5 elimină instalatorul intern, permisiunea REQUEST_INSTALL_PACKAGES și FileProvider-ul de actualizare după reapariția avertizării pe 1.1.4. Verificarea zilnică și descărcarea prin browser sunt păstrate, iar aprinderea și detecția magnetică sunt neschimbate.
