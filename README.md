@@ -1,12 +1,13 @@
 # Aplicații — descărcări comune
 
-Pagină statică GitHub Pages pentru **Agenda Salon**, **Agenda Frizerie**, **TRUST MC** și **Geometrie Roți**. Afișează numai edițiile curente, câte o opțiune per platformă disponibilă. Salon și Geometrie Roți au exclusiv APK Android.
+Pagină statică GitHub Pages pentru **Agenda Salon**, **Husa blocare ecran**, **Agenda Frizerie**, **TRUST MC** și **Geometrie Roți**. Afișează numai edițiile curente, câte o opțiune per platformă disponibilă. Salon, Husa și Geometrie Roți au exclusiv APK Android.
 
 Adresa publicată: https://caiuspoputa-debug.github.io/aplicatii/
 
 ## Distribuție
 
 - Salon Android: ultima distribuție APK existentă din `agenda-salon`.
+- Husa Android: APK-ul semnat și ghidurile PDF de instalare și configurare din `husa-blocare-ecran`.
 - Frizerie Android: APK-ul semnat din distribuția `tool-upload-iphone`.
 - Frizerie iPhone: deschide PWA la adresa originală. Originea, manifestul, stocarea și service worker-ul aplicației rămân la locul lor.
 - Trust Android și iPhone: deschid instalatorul existent `trust-mc-apps/descarca/` cu platforma corespunzătoare. Parola și protecția descărcării sunt păstrate; acest depozit nu conține APK Trust necriptat sau parole.
