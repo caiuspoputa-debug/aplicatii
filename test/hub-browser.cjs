@@ -7,7 +7,8 @@ const { createHash } = require('node:crypto');
 const { chromium } = require('playwright');
 const root = path.resolve(__dirname, '..');
 const expected = {
-  'salon-android': ["1.1.2", "https://github.com/caiuspoputa-debug/agenda-salon/releases/download/v1.1.2/Agenda-Salon-1.1.2.apk"],
+  'salon-android': ["1.1.3", "https://github.com/caiuspoputa-debug/agenda-salon/releases/download/v1.1.3/Agenda-Salon-1.1.3.apk"],
+  'husa-android': ["1.1.5", "https://caiuspoputa-debug.github.io/aplicatii/downloads/husa/1.1.5/Husa-Blocare-Ecran-1.1.5.apk"],
   'frizerie-android': ['5.0.15', 'https://github.com/caiuspoputa-debug/tool-upload-iphone/releases/download/v5.0.15/Agenda-Frizerie-5.0.15.apk'],
   'frizerie-iphone': ['5.0.15', 'https://caiuspoputa-debug.github.io/tool-upload-iphone/'],
   'trust-android': ['1.27', 'https://caiuspoputa-debug.github.io/trust-mc-apps/descarca/?platform=android'],
@@ -27,9 +28,9 @@ const fingerprints = productFiles.map(file => [file, hash(file)]);
   const errors = [], external = [];
   try {
     const catalog = JSON.parse(fs.readFileSync(path.join(root, 'catalog.json'), 'utf8'));
-    assert.equal(catalog.apps.length, 4);
+    assert.equal(catalog.apps.length, 5);
     for (const app of catalog.apps) for (const platform of ['android', 'iphone']) {
-      if (['salon', 'geometrie-roti'].includes(app.id) && platform === 'iphone') { assert.equal(app[platform], null); continue; }
+      if (['salon', 'husa', 'geometrie-roti'].includes(app.id) && platform === 'iphone') { assert.equal(app[platform], null); continue; }
       const [version, url] = expected[app.id + '-' + platform];
       assert.equal(app[platform].version, version); assert.equal(app[platform].url, url);
       if (['trust', 'geometrie-roti'].includes(app.id)) assert.equal(app[platform].passwordProtected, true);
@@ -64,7 +65,7 @@ const fingerprints = productFiles.map(file => [file, hash(file)]);
     });
     const before = await storage(); await page.goto(url);
     const actions = await page.locator('[data-download]').evaluateAll(nodes => nodes.map(node => ({ id: node.dataset.download, url: node.href, version: node.closest('.platform').querySelector('.version').textContent, platform: node.closest('.platform').querySelector('.platform-name').textContent, accessible: node.getAttribute('aria-label'), target: node.target, rel: node.rel, download: node.hasAttribute('download') })));
-    assert.equal(actions.length, 6); assert.deepEqual(actions.map(value => value.id), Object.keys(expected));
+    assert.equal(actions.length, 7); assert.deepEqual(actions.map(value => value.id), Object.keys(expected));
     for (const action of actions) {
       assert.equal(action.url, expected[action.id][1]); assert.equal(action.version, expected[action.id][0]);
       assert(action.accessible && action.accessible.includes(action.version));
@@ -73,13 +74,15 @@ const fingerprints = productFiles.map(file => [file, hash(file)]);
       if (action.target === '_blank') assert.match(action.rel, /(?:^|\s)noopener(?:\s|$)/);
     }
     assert.equal(await page.locator('[data-app="salon"] .platform').count(), 1);
+    const salon = catalog.apps.find(app => app.id === 'salon').android;
+    assert.deepEqual(await page.locator('[data-app="salon"] .installation-guide').evaluateAll(links => links.map(link => link.href)), [salon.installationGuideUrl, salon.userGuideUrl]);
     const frizerie = catalog.apps.find(app => app.id === 'frizerie');
     const frizerieCard = page.locator('[data-app="frizerie"]');
     assert.match(await frizerieCard.innerText(), /Caius Poputa/);
     assert.deepEqual(await frizerieCard.locator('.installation-guide').evaluateAll(links => links.map(link => link.href)), [frizerie.installationGuideUrl, frizerie.userGuideUrl]);
     assert.equal(await page.locator('[data-app="salon"] .iphone,[data-download="salon-iphone"]').count(), 0);
     assert.equal(await page.locator('[data-app="trust"] a[href$=".apk"],[data-app="trust"] a[href*="releases/download"],[data-app="trust"] a[href*=".enc"]').count(), 0);
-    console.log('PASS exactly five current-version actions, Salon Android only, exact Trust password-gate URLs and original Frizerie PWA origin');
+    console.log('PASS exactly seven current-version actions, Salon Android only, exact Trust password-gate URLs and original Frizerie PWA origin');
 
     const pageContract = await page.evaluate(() => ({ scripts: document.scripts.length, frames: document.querySelectorAll('iframe,object,embed').length, forms: document.forms.length, csp: document.querySelector('meta[http-equiv="Content-Security-Policy"]')?.content, resources: [...document.querySelectorAll('[src],link[href]')].map(node => node.src || node.href) }));
     assert.equal(pageContract.scripts, 0); assert.equal(pageContract.frames, 0); assert.equal(pageContract.forms, 0);
