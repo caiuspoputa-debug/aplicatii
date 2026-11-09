@@ -1,10 +1,10 @@
 {
   "applicationId": "ro.caiuspoputa.geometrieroti",
-  "versionName": "0.4.1",
-  "versionCode": 11,
+  "versionName": "0.4.2",
+  "versionCode": 12,
   "minSdk": 26,
   "size": 2652160,
-  "sha256": "e527f0bfc468872dd5844d8dd43494797d8f1fdd8ec799bda3d23797332639b8",
-  "apkUrl": "https://github.com/caiuspoputa-debug/geometrie-roti/releases/download/v0.4.1/Geometrie-Roti-0.4.1.apk",
-  "notes": "Corectează suprapunerea interfeței cu bara Android Acasă / Înapoi / Aplicații recente. Butonul Salvează programarea rămâne accesibil. Actualizare peste 0.4.0, fără dezinstalare."
+  "sha256": "6ce07640d1c377329579eef22d423c902fa3eb820025acbb332f6d1bb742e2a8",
+  "apkUrl": "https://github.com/caiuspoputa-debug/geometrie-roti/releases/download/v0.4.2/Geometrie-Roti-0.4.2.apk",
+  "notes": "Adaugă Șterge programarea în Corectează programarea, cu confirmare. Ștergerea actualizează încasările, statisticile și istoricul. Include corecția pentru bara Android cu trei butoane. Instalează peste 0.4.0 sau 0.4.1, fără dezinstalare."
 }
