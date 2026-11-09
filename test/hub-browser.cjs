@@ -13,7 +13,7 @@ const expected = {
   'frizerie-iphone': ['5.0.15', 'https://caiuspoputa-debug.github.io/tool-upload-iphone/'],
   'trust-android': ['1.27', 'https://caiuspoputa-debug.github.io/trust-mc-apps/descarca/?platform=android'],
   'trust-iphone': ['1.27.0', 'https://caiuspoputa-debug.github.io/trust-mc-apps/descarca/?platform=iphone'],
-  'geometrie-roti-android': ['0.4.2', 'https://github.com/caiuspoputa-debug/geometrie-roti/releases/download/v0.4.2/Geometrie-Roti-0.4.2.apk'],
+  'geometrie-roti-android': ['0.4.3', 'https://github.com/caiuspoputa-debug/geometrie-roti/releases/download/v0.4.3/Geometrie-Roti-0.4.3.apk'],
   'sms-forward-android': ['1.5', 'https://caiuspoputa-debug.github.io/aplicatii/downloads/sms-forward/1.5/SMS-Automat-Principal-1.5.apk']
 };
 const productFiles = ['index.html', 'styles.css', 'catalog.json', 'assets/mark.svg', 'sms-forward-instalare.html', 'sms-forward-android-update.json'].map(name => path.join(root, name));

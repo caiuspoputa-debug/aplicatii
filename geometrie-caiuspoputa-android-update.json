@@ -1,10 +1,10 @@
 {
   "applicationId": "ro.caiuspoputa.geometrieroti",
-  "versionName": "0.4.2",
-  "versionCode": 12,
+  "versionName": "0.4.3",
+  "versionCode": 13,
   "minSdk": 26,
-  "size": 2652160,
-  "sha256": "6ce07640d1c377329579eef22d423c902fa3eb820025acbb332f6d1bb742e2a8",
-  "apkUrl": "https://github.com/caiuspoputa-debug/geometrie-roti/releases/download/v0.4.2/Geometrie-Roti-0.4.2.apk",
-  "notes": "Adaugă Șterge programarea în Corectează programarea, cu confirmare. Ștergerea actualizează încasările, statisticile și istoricul. Include corecția pentru bara Android cu trei butoane. Instalează peste 0.4.0 sau 0.4.1, fără dezinstalare."
+  "size": 3085449,
+  "sha256": "ceb96fb5af80c44ed9237f8c83254e556e9d2d37640f7e67642d2835c3f1b3a2",
+  "apkUrl": "https://github.com/caiuspoputa-debug/geometrie-roti/releases/download/v0.4.3/Geometrie-Roti-0.4.3.apk",
+  "notes": "Backup Google Drive manual și automat, cu alegerea contului în browser, inclusiv un cont neadăugat pe telefon. Restaurare cu confirmare și preferințe separate pentru fiecare cont. Firebase rămâne separat. Instalează peste 0.4.x, fără dezinstalare."
 }
