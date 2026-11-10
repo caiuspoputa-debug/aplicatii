@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-09",
+  "updated": "2026-11-10",
   "apps": [
     {
       "id": "salon",
@@ -76,11 +76,11 @@
       "id": "geometrie-roti",
       "name": "Geometrie Roți",
       "android": {
-        "version": "0.4.3",
-        "versionCode": 13,
-        "bytes": 3085449,
-        "url": "https://github.com/caiuspoputa-debug/geometrie-roti/releases/download/v0.4.3/Geometrie-Roti-0.4.3.apk",
-        "sha256": "ceb96fb5af80c44ed9237f8c83254e556e9d2d37640f7e67642d2835c3f1b3a2",
+        "version": "0.4.4",
+        "versionCode": 14,
+        "bytes": 3089545,
+        "url": "https://github.com/caiuspoputa-debug/geometrie-roti/releases/download/v0.4.4/Geometrie-Roti-0.4.4.apk",
+        "sha256": "447ee38cc6817c61d589815a8236446cd4b0d5a0edffae6e1d8231ea06e4ebb1",
         "passwordProtected": true,
         "installationGuideUrl": "https://github.com/caiuspoputa-debug/geometrie-roti/releases/download/v0.4.0/Geometrie-Roti-Instructiuni-Instalare.pdf",
         "userGuideUrl": "https://github.com/caiuspoputa-debug/geometrie-roti/releases/download/v0.4.0/Geometrie-Roti-Ghid-de-Utilizare.pdf",

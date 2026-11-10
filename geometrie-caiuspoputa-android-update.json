@@ -1,10 +1,10 @@
 {
   "applicationId": "ro.caiuspoputa.geometrieroti",
-  "versionName": "0.4.3",
-  "versionCode": 13,
+  "versionName": "0.4.4",
+  "versionCode": 14,
   "minSdk": 26,
-  "size": 3085449,
-  "sha256": "ceb96fb5af80c44ed9237f8c83254e556e9d2d37640f7e67642d2835c3f1b3a2",
-  "apkUrl": "https://github.com/caiuspoputa-debug/geometrie-roti/releases/download/v0.4.3/Geometrie-Roti-0.4.3.apk",
-  "notes": "Backup Google Drive manual și automat, cu alegerea contului în browser, inclusiv un cont neadăugat pe telefon. Restaurare cu confirmare și preferințe separate pentru fiecare cont. Firebase rămâne separat. Instalează peste 0.4.x, fără dezinstalare."
+  "size": 3089545,
+  "sha256": "447ee38cc6817c61d589815a8236446cd4b0d5a0edffae6e1d8231ea06e4ebb1",
+  "apkUrl": "https://github.com/caiuspoputa-debug/geometrie-roti/releases/download/v0.4.4/Geometrie-Roti-0.4.4.apk",
+  "notes": "Bife în Setări pentru ascunderea cheltuielilor din statistici și a numărului de înmatriculare din programări. Numărul de înmatriculare devine opțional. Deschide în Telefon pregătește numărul solicitantului; apelul îl pornești tu. Datele existente se păstrează. Instalează peste 0.4.x, fără dezinstalare."
 }
