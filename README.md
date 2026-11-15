@@ -7,7 +7,7 @@ Adresa publicată: https://caiuspoputa-debug.github.io/aplicatii/
 ## Distribuție
 
 - Salon Android: ultima distribuție APK existentă din `agenda-salon`.
-- Husa Android 1.0: APK-ul semnat și cele două ghiduri PDF sunt servite direct din `downloads/husa/1.0/`, pentru a evita eroarea 504 de pe ruta GitHub Releases. Păstrează edițiile anterioare în directoarele lor; schimbă versiunea, linkurile și SHA-256 în pagină și catalog la fiecare publicare. Husa 1.0 are identificator nou și se instalează separat de 1.1.5.
+- Husa Android 1.0.1: APK-ul semnat și cele două ghiduri PDF sunt servite direct din `downloads/husa/1.0.1/`, pentru a evita eroarea 504 de pe ruta GitHub Releases. Păstrează edițiile anterioare în directoarele lor; schimbă versiunea, linkurile și SHA-256 în pagină și catalog la fiecare publicare. Husa 1.0.1 se actualizează peste 1.0 și rămâne separată de 1.1.5.
 - Frizerie Android: APK-ul semnat din distribuția `tool-upload-iphone`.
 - Frizerie iPhone: deschide PWA la adresa originală. Originea, manifestul, stocarea și service worker-ul aplicației rămân la locul lor.
 - Trust Android și iPhone: deschid instalatorul existent `trust-mc-apps/descarca/` cu platforma corespunzătoare. Parola și protecția descărcării sunt păstrate; acest depozit nu conține APK Trust necriptat sau parole.
@@ -23,7 +23,7 @@ Pagina nu are scripturi, formulare, iframe, service worker, analytics sau acces 
 
 Actualizatorul noii aplicații citește exclusiv `geometrie-caiuspoputa-android-update.json`, cu `applicationId`, versiune, dimensiune, SHA-256 și URL-ul exact al APK-ului. Actualizează acest fișier pentru edițiile viitoare ale noii aplicații, folosind același identificator și certificat personal. `geometrie-android-update.json` rămâne destinat aplicației vechi; nu anunța acolo APK-ul cu identificatorul nou.
 
-Pentru Husa 1.0, pagina și catalogul indică descărcările directe din GitHub Pages. Manifestul `husa-android-update.json` rămâne pentru aplicațiile vechi 1.1.x; Husa 1.0 nu conține verificare de actualizări. Cheia privată și parola nu se publică.
+Pentru Husa 1.0.x, pagina și catalogul indică descărcările directe din GitHub Pages. Manifestul `husa-android-update.json` rămâne pentru aplicațiile vechi 1.1.x; Husa 1.0.x nu conține verificare de actualizări. Cheia privată și parola nu se publică.
 
 ## Actualizări Husa
 
@@ -42,4 +42,4 @@ Husa 1.1.5 elimină instalatorul intern, permisiunea REQUEST_INSTALL_PACKAGES ș
 Manifestul conține versiunea, identificatorul aplicației, certificatul, dimensiunea, SHA-256 și URL-ul APK-ului. Câmpurile `versionName` și `version`, respectiv `apkUrl` și `url`, trebuie să aibă valori identice. Aplicația deschide descărcarea în browser; instalarea se confirmă în Android.
 
 
-Husa 1.0 folosește `ro.caiuspoputa.husablocareecran`, păstrează detectarea magnetică, blocarea prin Accesibilitate și monitorizarea în fundal, dar elimină verificarea de actualizări, internetul, exportul diagnostic și Device Admin. Certificatul de semnare este `95c79cbc9e68e31611c477f8cc27050a682b4ee616a5c25d6cbc40005f1d2bf6`.
+Husa 1.0.x folosește `ro.caiuspoputa.husablocareecran`, păstrează detectarea magnetică, blocarea prin Accesibilitate și monitorizarea în fundal, fără verificare de actualizări, internet, export diagnostic sau Device Admin. 1.0.1 folosește magnetometrul necalibrat ca prioritate și cel calibrat doar când lipsește. Certificatul de semnare este `95c79cbc9e68e31611c477f8cc27050a682b4ee616a5c25d6cbc40005f1d2bf6`.
