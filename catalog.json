@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15",
+  "updated": "2026-11-17",
   "apps": [
     {
       "id": "salon",
@@ -20,14 +20,14 @@
       "name": "Husa blocare ecran",
       "developer": "Caius Poputa",
       "android": {
-        "version": "1.0.2",
-        "versionCode": 3,
+        "version": "1.0.3",
+        "versionCode": 4,
         "applicationId": "ro.caiuspoputa.husablocareecran",
-        "bytes": 7998893,
-        "sha256": "e498a23ce4865381acf9429c303a3d000171770aa37b33940d490d64732f1af2",
-        "url": "https://caiuspoputa-debug.github.io/aplicatii/downloads/husa/1.0.2/Husa-Blocare-Ecran-1.0.2.apk",
-        "installationGuideUrl": "https://caiuspoputa-debug.github.io/aplicatii/downloads/husa/1.0.2/Husa-Instalare.pdf",
-        "userGuideUrl": "https://caiuspoputa-debug.github.io/aplicatii/downloads/husa/1.0.2/Husa-Configurare.pdf",
+        "bytes": 7982509,
+        "sha256": "8adb4812fb579e5eff3939306ad78b640c66a65478f68dd7fece7f37a6d4b91c",
+        "url": "https://caiuspoputa-debug.github.io/aplicatii/downloads/husa/1.0.3/Husa-Blocare-Ecran-1.0.3.apk",
+        "installationGuideUrl": "https://caiuspoputa-debug.github.io/aplicatii/downloads/husa/1.0.3/Husa-Instalare.pdf",
+        "userGuideUrl": "https://caiuspoputa-debug.github.io/aplicatii/downloads/husa/1.0.3/Husa-Configurare.pdf",
         "signingCertificateSha256": "95c79cbc9e68e31611c477f8cc27050a682b4ee616a5c25d6cbc40005f1d2bf6"
       },
       "iphone": null
