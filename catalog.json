@@ -39,16 +39,16 @@
       "installationGuideUrl": "https://caiuspoputa-debug.github.io/tool-upload-iphone/ghid-instalare.pdf",
       "userGuideUrl": "https://caiuspoputa-debug.github.io/tool-upload-iphone/ghid-utilizare.pdf",
       "android": {
-        "version": "5.0.15",
-        "versionCode": 21,
-        "bytes": 2635172,
-        "url": "https://github.com/caiuspoputa-debug/tool-upload-iphone/releases/download/v5.0.15/Agenda-Frizerie-5.0.15.apk",
-        "sha256": "9c042993b95d087d98ed2ff1cfa054e2463ded0b45616e97da0190f76e893571",
+        "version": "5.0.16",
+        "versionCode": 22,
+        "bytes": 2766580,
+        "url": "https://github.com/caiuspoputa-debug/tool-upload-iphone/releases/download/v5.0.16/Agenda-Frizerie-5.0.16.apk",
+        "sha256": "fc15f587483af8bf7e3070189e614e1a43e5ad6cc7a3b5886cdaacd48058beaf",
         "applicationId": "ro.caiuspoputa.agendafrizerie",
         "signingCertificateSha256": "95c79cbc9e68e31611c477f8cc27050a682b4ee616a5c25d6cbc40005f1d2bf6"
       },
       "iphone": {
-        "version": "5.0.15",
+        "version": "5.0.16",
         "type": "pwa",
         "url": "https://caiuspoputa-debug.github.io/tool-upload-iphone/"
       }
