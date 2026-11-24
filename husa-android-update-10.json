@@ -1,11 +1,11 @@
 {
-  "version": "1.0.5",
-  "versionCode": 6,
+  "version": "1.0.6",
+  "versionCode": 7,
   "applicationId": "ro.caiuspoputa.husablocareecran",
-  "bytes": 8015277,
-  "sha256": "ad226fd9d6bb73bf8324195912c36948e1999666d739a115f823cdbe7a4f8020",
+  "bytes": 8703563,
+  "sha256": "d06add231006275ec49bdbe5777737d80335cf4a760181e729f229a3b45bc20f",
   "signingCertificateSha256": "95c79cbc9e68e31611c477f8cc27050a682b4ee616a5c25d6cbc40005f1d2bf6",
   "minSdk": 26,
-  "url": "https://caiuspoputa-debug.github.io/aplicatii/downloads/husa/1.0.5/Husa-Blocare-Ecran-1.0.5.apk",
-  "releaseNotes": "Restabilește fila Diagnostic cu jurnalul ultimelor 40 de evenimente, copiere, distribuire și export TXT. Jurnalul local este limitat la 12 KB și păstrează automat evenimentele recente. Verificarea actualizărilor și logica de husă rămân disponibile."
+  "url": "https://caiuspoputa-debug.github.io/aplicatii/downloads/husa/1.0.6/Husa-Blocare-Ecran-1.0.6.apk",
+  "releaseNotes": "Icon 3D nou, cu fundal transparent și fără lacăt. Funcționalitatea aplicației rămâne neschimbată."
 }
