@@ -1,11 +1,11 @@
 {
-  "version": "1.0.4",
-  "versionCode": 5,
+  "version": "1.0.5",
+  "versionCode": 6,
   "applicationId": "ro.caiuspoputa.husablocareecran",
-  "bytes": 7998893,
-  "sha256": "ebb653d24fbc60f61ce5c979735f6455d556c7ecdf534b64730279bff370a7a0",
+  "bytes": 8015277,
+  "sha256": "ad226fd9d6bb73bf8324195912c36948e1999666d739a115f823cdbe7a4f8020",
   "signingCertificateSha256": "95c79cbc9e68e31611c477f8cc27050a682b4ee616a5c25d6cbc40005f1d2bf6",
   "minSdk": 26,
-  "url": "https://caiuspoputa-debug.github.io/aplicatii/downloads/husa/1.0.4/Husa-Blocare-Ecran-1.0.4.apk",
-  "releaseNotes": "Elimină dubla trezire a ecranului la husă deschisă. Verifică actualizările din GitHub o dată pe zi și permite verificare manuală din meniu; descărcarea se deschide în browser. Afișează valoarea magnetică maximă, memorată până la resetarea manuală."
+  "url": "https://caiuspoputa-debug.github.io/aplicatii/downloads/husa/1.0.5/Husa-Blocare-Ecran-1.0.5.apk",
+  "releaseNotes": "Restabilește fila Diagnostic cu jurnalul ultimelor 40 de evenimente, copiere, distribuire și export TXT. Jurnalul local este limitat la 12 KB și păstrează automat evenimentele recente. Verificarea actualizărilor și logica de husă rămân disponibile."
 }
