@@ -9,8 +9,8 @@ const root = path.resolve(__dirname, '..');
 const expected = {
   'salon-android': ["1.1.6", "https://caiuspoputa-debug.github.io/aplicatii/downloads/salon/1.1.6/Agenda-Salon-1.1.6.apk"],
   'husa-android': ["1.0.6", "https://caiuspoputa-debug.github.io/aplicatii/downloads/husa/1.0.6/Husa-Blocare-Ecran-1.0.6.apk"],
-  'frizerie-android': ['5.0.16', 'https://github.com/caiuspoputa-debug/tool-upload-iphone/releases/download/v5.0.16/Agenda-Frizerie-5.0.16.apk'],
-  'frizerie-iphone': ['5.0.16', 'https://caiuspoputa-debug.github.io/tool-upload-iphone/'],
+  'frizerie-android': ['5.0.17', 'https://github.com/caiuspoputa-debug/tool-upload-iphone/releases/download/v5.0.17/Agenda-Frizerie-5.0.17.apk'],
+  'frizerie-iphone': ['5.0.17', 'https://caiuspoputa-debug.github.io/tool-upload-iphone/'],
   'trust-android': ['1.27', 'https://caiuspoputa-debug.github.io/trust-mc-apps/descarca/?platform=android'],
   'trust-iphone': ['1.27.0', 'https://caiuspoputa-debug.github.io/trust-mc-apps/descarca/?platform=iphone'],
   'geometrie-roti-android': ['0.4.4', 'https://github.com/caiuspoputa-debug/geometrie-roti/releases/download/v0.4.4/Geometrie-Roti-0.4.4.apk'],
